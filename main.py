@@ -12,12 +12,8 @@ import requests
 app = FastAPI()
 handler = Mangum(app)
 
-ANTHROPIC_API_KEY = "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"  # Replace with your Anthropic API key
-
 # Set up the Anthropic API client
 client = anthropic.Client(api_key=ANTHROPIC_API_KEY)
-
-RAPID_API = "87180149d3mshf1f79e6b5836735p128fc5jsnecd851a6bfaf"
 
 @app.get("/")
 async def root():
